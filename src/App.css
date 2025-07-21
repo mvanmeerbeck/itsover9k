@@ -1,0 +1,143 @@
+/* Reset des marges/padding globaux */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow-x: hidden;
+}
+
+.App {
+  text-align: center;
+  min-height: 100vh;
+}
+
+.App-header {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 20px;
+  color: white;
+  min-height: 100vh;
+}
+
+.App-header h1 {
+  margin-bottom: 30px;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+/* Section des cartes */
+.cards-section {
+  margin-top: 40px;
+}
+
+.cards-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.cards-header h2 {
+  margin: 0;
+  color: #fff;
+  flex: 1;
+  min-width: 300px;
+}
+
+.header-buttons {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.clear-button {
+  background: linear-gradient(45deg, #e74c3c, #c0392b);
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.clear-button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 15px rgba(231, 76, 60, 0.3);
+}
+
+.no-cards {
+  color: rgba(255, 255, 255, 0.8);
+  font-style: italic;
+  margin: 40px 0;
+}
+
+/* Grille des cartes - Layout simple */
+.cards-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+  padding: 20px;
+}
+
+/* Images des cartes */
+.card-image {
+  width: 120px;
+  height: 120px;
+  object-fit: contain;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.card-image:hover {
+  transform: scale(1.05);
+}
+
+/* Effet noir et blanc pour les cartes non possédées */
+.card-image.not-owned {
+  filter: grayscale(100%) brightness(0.6);
+}
+
+.card-image.not-owned:hover {
+  filter: grayscale(80%) brightness(0.75);
+}
+
+/* Cartes possédées - couleur normale */
+.card-image.owned {
+  filter: none;
+}
+
+.card-image.owned:hover {
+  filter: none;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .App-header {
+    padding: 15px;
+  }
+  
+  .cards-header {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .cards-grid {
+    gap: 10px;
+    padding: 15px;
+  }
+  
+  .card-image {
+    width: 100px;
+    height: 100px;
+  }
+}
