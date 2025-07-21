@@ -1,7 +1,7 @@
 {
   "name": "itsover9k",
   "version": "1.0.0",
-  "description": "",
+  "description": "Collection manager for Dokkan Battle cards",
   "main": "index.js",
   "scripts": {
     "start": "react-scripts start",
@@ -9,7 +9,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
-  "keywords": [],
+  "keywords": ["dokkan", "battle", "cards", "collection"],
   "author": "",
   "license": "ISC",
   "packageManager": "pnpm@10.13.1",
