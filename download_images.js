@@ -77,7 +77,7 @@ async function main() {
   let errorCount = 0;
 
   // Télécharger une image par seconde, de 2277 à 1
-  for (let id = 18; id >= 1; id--) {
+  for (let id = 2300; id >= 1; id--) {
     const result = await downloadImage(id);
     results.push(result);
     
@@ -91,7 +91,7 @@ async function main() {
     }
     
     // Attendre 1 seconde avant la prochaine image (sauf pour la dernière)
-    if (id < 2277) {
+    if (id < 2300) {
       await new Promise(resolve => setTimeout(resolve, 1000));
     }
   }
